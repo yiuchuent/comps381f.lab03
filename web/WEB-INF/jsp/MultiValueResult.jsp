@@ -16,16 +16,20 @@
     </head> 
     <body> 
         <h1>Your Selections</h1> 
-        <% if (fruits == null) {%>
+        <%
+            if (fruits == null) {
+        %>
         You did not select any fruits 
         <%
-            } else {
-                out.print("<ul>");
-                for (String fruit : fruits) {
-                    out.print("<li>" + fruit + "</li>");
+        } else {
+            out.print("<ul>");
+            for (String fruit : fruits) {
+        %>
+            <li><%=fruit%></li>
+        <%
                 }
             }
             out.print("</ul>");
         %>
-    </body> 
+</body> 
 </html>
